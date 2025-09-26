@@ -1,0 +1,22 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  labels:
+    argocd.argoproj.io/type: argocd-install
+  namespace: argocd
+spec:
+  project: default
+  sources:
+    - repoURL: https://github.com/jfr992/argocd-playground-migration.git
+      targetRevision: main
+      helm:
+        valueFiles:
+          - ./values.yaml
+      path: install/
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy: {}

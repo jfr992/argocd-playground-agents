@@ -1,0 +1,10 @@
+apiVersion: v2
+appVersion: "v2.14.11"
+description: Wrapper chart for argocd
+name: argo-cd
+version: 7.9.1
+
+dependencies:
+- name: argo-cd
+  version: 7.9.1
+  repository: https://argoproj.github.io/argo-helm

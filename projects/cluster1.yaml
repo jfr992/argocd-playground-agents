@@ -1,0 +1,20 @@
+---
+# Source: projects/templates/project.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cluster1
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  destinations:
+    - name: '*'
+      namespace: '*'
+      server: https://cluster1-control-plane:6443
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+  sourceRepos:
+    - https://github.com/jfr992/argocd-playground-migration.git

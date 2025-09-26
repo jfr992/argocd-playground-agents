@@ -1,0 +1,16 @@
+# Helm charts
+**/charts/
+**/Chart.lock
+*.tgz
+
+
+# Helm values override files (optional - uncomment if needed)
+# values-*.yaml
+# values.*.yaml
+
+# Helm release files
+*.release
+
+# Temporary files
+*.tmp
+*.temp
