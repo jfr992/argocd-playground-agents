@@ -28,7 +28,7 @@ spec:
       destination:
         name: kind-cluster1
         namespace: "{{.path.basename}}"
-      syncPolicy:
-        automated:
-          prune: false
-          selfHeal: true
+      syncPolicy: {}
+        # automated:
+        #   prune: false
+        #   selfHeal: true
