@@ -22,9 +22,9 @@ argocd-apps:
         server: https://kubernetes.default.svc
         namespace: argocd
       syncPolicy: 
-        automated:
-          prune: false
-          selfHeal: false
+        # automated:
+        #   prune: false
+        #   selfHeal: false
 
     projects:
       namespace: argocd
@@ -43,9 +43,9 @@ argocd-apps:
         server: https://kubernetes.default.svc
         namespace: argocd
       syncPolicy: 
-        automated:
-          prune: true
-          selfHeal: true
+        # automated:
+        #   prune: true
+        #   selfHeal: true
 
   # -- Deploy Argo CD Projects within this helm release
   # @default -- `[]` (See [values.yaml])
