@@ -58,8 +58,7 @@ argocd-apps:
         repoURL: https://github.com/jfr992/argocd-playground-agents.git
         targetRevision: main
         path: cluster1/
-        directory:
-          recurse: true
+        directory: {}
       destination:
         server: https://kubernetes.default.svc
         namespace: argocd
