@@ -11,7 +11,7 @@ spec:
   goTemplateOptions: ["missingkey=error"]
   generators:
   - git:
-      repoURL: https://github.com/jfr992/argocd-playground-migration.git
+      repoURL: https://github.com/jfr992/argocd-playground-agents.git
       revision: main
       directories:
       - path: clusters/*
@@ -21,7 +21,7 @@ spec:
     spec:
       project: argocd
       source:
-        repoURL: https://github.com/jfr992/argocd-playground-migration.git
+        repoURL: https://github.com/jfr992/argocd-playground-agents.git
         targetRevision: main
         path: '{{.path.path}}'
       destination:
