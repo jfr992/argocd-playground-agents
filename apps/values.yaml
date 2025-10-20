@@ -53,7 +53,7 @@ argocd-apps:
       additionalAnnotations: {}
       finalizers:
         - resources-finalizer.argocd.argoproj.io
-      project: argocd
+      project: default
       source:
         repoURL: https://github.com/jfr992/argocd-playground-agents.git
         targetRevision: main

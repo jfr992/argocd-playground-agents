@@ -4,7 +4,7 @@ metadata:
   name: nginx1
   namespace: argocd
 spec:
-  project: argocd
+  project: default
   source:
     repoURL: https://github.com/jfr992/argocd-playground-agents.git
     targetRevision: main
