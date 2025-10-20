@@ -8,3 +8,8 @@ argo-cd:
   server:
     extraArgs:
       - --insecure
+    extensions:
+      enabled: true
+      contents:
+        - name: argocd-agent
+          url: https://github.com/argoproj-labs/argocd-agent/releases/download/v0.4.1/argocd-agent-extension.tar.gz
